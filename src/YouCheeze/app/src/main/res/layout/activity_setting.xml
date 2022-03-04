@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".SettingActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:text="マーカー更新間隔" />
+
+    <Spinner
+        android:id="@+id/spinMarkerInterval"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:spinnerMode="dialog" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:text="横向き時のボタン位置" />
+
+    <Spinner
+        android:id="@+id/spinStartButtonPos"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:spinnerMode="dialog" />
+</LinearLayout>

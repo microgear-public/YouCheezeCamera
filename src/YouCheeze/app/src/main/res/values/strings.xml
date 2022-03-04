@@ -1,0 +1,42 @@
+<resources>
+    <!-- 共通 -->
+    <string name="app_name">ゆーちーずFREE</string>
+
+    <!-- 画面タイトル -->
+    <string name="title_setting">設定</string>
+    <string name="title_licenses">オープンソースライセンス</string>
+
+    <!-- メニュー -->
+    <string name="menu_licenses">オープンソースライセンス</string>
+
+    <!-- 開始ボタン位置 -->
+    <string name="item_start_button_pos_left">左側</string>
+    <string name="item_start_button_pos_right">右側</string>
+
+    <!-- マーカー更新間隔 -->
+    <string name="item_marker_interval_1sec" >１秒 (電車,車)</string>
+    <string name="item_marker_interval_5sec" >５秒 (ランニング)</string>
+    <string name="item_marker_interval_10sec">１０秒 (散歩)</string>
+
+    <!-- 外部アプリ選択 -->
+    <string name="message_intent_not_found">アプリケーションが見つかりません。</string>
+    <string name="message_saved_file_location">DCIM/YouCheezeに保存されています。\n移動して探してください。</string>
+
+    <!-- YouCheezeの変換サイトURL -->
+    <string name="url_you_cheeze_converter">https://www.microgear.co.jp</string>
+
+    <!-- 動画作成処理中メッセージ -->
+    <string name="message_qr_overlay_processing">処理中(%d)…</string>
+
+    <!-- 機能制限メッセージ -->
+    <string name="message_rec_restriction">フリー版の撮影時間は最大%d分です。\n撮影を停止しました。</string>
+
+    <!-- アプリ通知 -->
+    <string name="qr_overlay_notification_name">ゆーちーず動画作成</string>
+    <string name="qr_overlay_notification_processing_title">ゆーちーず動画を作成中</string>
+    <string name="qr_overlay_notification_completed_title">ゆーちーず動画作成完了</string>
+    <string name="qr_overlay_notification_failed_title">ゆーちーず動画作成失敗</string>
+    <string name="qr_overlay_notification_canceled_title">ゆーちーず動画作成キャンセル</string>
+    <string name="qr_overlay_notification_filename_text">%s</string>
+    <string name="qr_overlay_notification_cancel">キャンセル</string>
+</resources>

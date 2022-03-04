@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="table_border">@color/white</color>
+    <color name="table_background">#FF101010</color>
+    <color name="site_link_text">@color/white</color>
+    <color name="site_link_border">@color/white</color>
+</resources>
