@@ -39,7 +39,7 @@ class AppSettings private constructor() {
         const val MAX_REC_RESTRICTION_MIN = 10
 
         /** マーカー更新間隔デフォルト値 */
-        const val DEFAULT_MARKER_UPDATE_INTERVAL = 10
+        const val DEFAULT_MARKER_UPDATE_INTERVAL = 3
 
         /** 開始ボタン位置デフォルト値 */
         private val DEFAULT_START_BUTTON_POS = StartButtonPosition.RIGHT

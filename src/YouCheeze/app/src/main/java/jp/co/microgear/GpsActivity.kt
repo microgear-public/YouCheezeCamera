@@ -145,7 +145,7 @@ class GpsActivity : AppCompatActivity() {
             // 位置情報が有効ではない場合、ダイアログを表示
             AlertDialog.Builder(this)
                 .setTitle("位置情報が有効ではありません")
-                .setMessage("ゆーちーずは位置情報が(GPS、無線ネットワーク共に)有効になるまで使用できません。")
+                .setMessage("ゆーちーずカメラは位置情報が(GPS、無線ネットワーク共に)有効になるまで使用できません。")
                 .setPositiveButton("設定を開く") { _, _ ->
                     // 設定アプリに遷移
                     val settingsIntent = Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS)

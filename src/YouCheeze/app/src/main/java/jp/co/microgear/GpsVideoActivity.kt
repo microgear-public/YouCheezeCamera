@@ -8,7 +8,6 @@ import android.content.pm.PackageManager
 import android.content.res.Configuration
 import android.location.LocationManager
 import android.media.MediaActionSound
-import android.net.Uri
 import android.os.*
 import android.provider.Settings
 import android.util.Log
@@ -107,19 +106,10 @@ class GpsVideoActivity : AppCompatActivity() {
             // 権限が足りない場合はリクエストする
             ActivityCompat.requestPermissions(this, deniededPermissions.toTypedArray(), PERMISSION_CODE)
         } else {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R &&
-                !Environment.isExternalStorageManager()) {
-                val intent = Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION)
-                intent.data = Uri.fromParts("package", this.packageName, null)
-                startActivity(intent)
-                // 現在のアクティビティを閉じる
-                finish()
-            } else {
-                // 権限が満たされている場合は位置情報のリッスンを開始
-                startLocationListener()
-                // カメラプレビューの開始
-                cameraView.start()
-            }
+            // 権限が満たされている場合は位置情報のリッスンを開始
+            startLocationListener()
+            // カメラプレビューの開始
+            cameraView.start()
         }
 
         // 撮影音をロード
@@ -145,19 +135,10 @@ class GpsVideoActivity : AppCompatActivity() {
         if (requestCode == PERMISSION_CODE) {
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 Log.d("debug", "checkSelfPermission true")
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R &&
-                    !Environment.isExternalStorageManager()) {
-                    val intent = Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION)
-                    intent.data = Uri.fromParts("package", this.packageName, null)
-                    startActivity(intent)
-                    // 現在のアクティビティを閉じる
-                    finish()
-                } else {
-                    // 使用が許可された時は位置情報のリッスンを開始
-                    startLocationListener()
-                    // カメラプレビューの開始
-                    cameraView.start()
-                }
+                // 使用が許可された時は位置情報のリッスンを開始
+                startLocationListener()
+                // カメラプレビューの開始
+                cameraView.start()
             } else {
                 // 拒否された時はトーストを表示して終了
                 Toast.makeText(this,"必要な権限が許可されませんでした", Toast.LENGTH_SHORT).show()
@@ -185,7 +166,7 @@ class GpsVideoActivity : AppCompatActivity() {
             // 位置情報が有効ではない場合、ダイアログを表示
             AlertDialog.Builder(this)
                 .setTitle("位置情報が有効ではありません")
-                .setMessage("ゆーちーずは位置情報が(GPS、無線ネットワーク共に)有効になるまで使用できません。")
+                .setMessage("ゆーちーずカメラは位置情報が(GPS、無線ネットワーク共に)有効になるまで使用できません。")
                 .setPositiveButton("設定を開く") { _, _ ->
                     // 設定アプリに遷移
                     val settingsIntent = Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS)
@@ -263,7 +244,7 @@ class GpsVideoActivity : AppCompatActivity() {
             movieDir.mkdirs()
         }
 
-        val movieWorkDir = File(applicationContext.getExternalFilesDir("YouCheeze"), recordingStartTime)
+        val movieWorkDir = File(applicationContext.getExternalFilesDir(null), recordingStartTime)
 
         val tempVideoFile = File(movieWorkDir, "$recordingStartTime.mp4")
         qrCodeOverlay.initialize(

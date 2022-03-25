@@ -33,8 +33,8 @@ class SettingActivity : AppCompatActivity() {
         // アイテムリストを生成
         val items: ArrayList<SpinnerItem> = arrayListOf(
             SpinnerItem(1, getString(R.string.item_marker_interval_1sec)),
-            SpinnerItem(5, getString(R.string.item_marker_interval_5sec)),
-            SpinnerItem(10, getString(R.string.item_marker_interval_10sec))
+            SpinnerItem(3, getString(R.string.item_marker_interval_3sec)),
+            SpinnerItem(5, getString(R.string.item_marker_interval_5sec))
         )
 
         // スピナーのアダプタを設定

@@ -1,6 +1,6 @@
 <resources>
     <!-- 共通 -->
-    <string name="app_name">ゆーちーずFREE</string>
+    <string name="app_name">ゆーちーずカメラLite</string>
 
     <!-- 画面タイトル -->
     <string name="title_setting">設定</string>
@@ -14,16 +14,16 @@
     <string name="item_start_button_pos_right">右側</string>
 
     <!-- マーカー更新間隔 -->
-    <string name="item_marker_interval_1sec" >１秒 (電車,車)</string>
-    <string name="item_marker_interval_5sec" >５秒 (ランニング)</string>
-    <string name="item_marker_interval_10sec">１０秒 (散歩)</string>
+    <string name="item_marker_interval_1sec">１秒 (電車,車)</string>
+    <string name="item_marker_interval_3sec">３秒 (ランニング)</string>
+    <string name="item_marker_interval_5sec">５秒 (散歩)</string>
 
     <!-- 外部アプリ選択 -->
     <string name="message_intent_not_found">アプリケーションが見つかりません。</string>
     <string name="message_saved_file_location">DCIM/YouCheezeに保存されています。\n移動して探してください。</string>
 
     <!-- YouCheezeの変換サイトURL -->
-    <string name="url_you_cheeze_converter">https://www.microgear.co.jp</string>
+    <string name="url_you_cheeze_converter">https://youcheeze.net/</string>
 
     <!-- 動画作成処理中メッセージ -->
     <string name="message_qr_overlay_processing">処理中(%d)…</string>
